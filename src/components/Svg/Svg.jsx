@@ -10,8 +10,7 @@ const KittyKatty = (props) => {
                 <ellipse cx="50" cy="50" rx="35" ry="35" fill="white" />
                 <polygon points="95,15 80,60 45,25" fill="white" />
                 <polygon points="90,20 85,35 75,25" fill="pink" />
-                <polygon points="90,55 65,80 62,25" fill="white" />
-                <polygon points="90,55 65,80 62,25" fill="white" />
+                <polygon points="90,55 65,79 62,25" fill="white" />
                 <ellipse cx="35" cy="45" rx="3" ry="7" fill="black" />
                 <ellipse cx="65" cy="45" rx="3" ry="7" fill="black" />
                 <polygon points="45,55 55,55 50,60" fill="pink" />

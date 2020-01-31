@@ -2,6 +2,7 @@ import React,{ Component } from "react";
 import { Container, Row, Col } from 'reactstrap';
 import KittyKatty from "../Svg/Svg";
 import SearchForm from "../SearchForm/SearchForm";
+import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 
 export default class ViewBox extends Component { 
 
@@ -31,6 +32,10 @@ export default class ViewBox extends Component {
                     <br /> Be
                     <br />
                     linked
+                </Col>
+                <Col xs="10">
+                    <br />
+                    <HomeJumbo />
                 </Col>
                 </Row>
             </Container>
