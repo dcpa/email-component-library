@@ -17,6 +17,7 @@ export default class EmailShell extends React.Component {
                         <tr>
                             <td align="center">
                                 <table bgcolor="#FFFFFF" cellPadding="0" cellSpacing="0" width="100%">
+                                    <tbody>
                                     <tr>
                                         <td align="center" bgcolor="#FFFFFF" className="inner-padding" style={{padding: "0px 0px 0px 0px", textAlign: "center",  lineHeight: "1.4em"}}>
                                             <table align="center" bgcolor="#FFFFFF" border="0" cellPadding="0" cellSpacing="0" style={{textAlign: "center", fontFamily:  "Montserrat, sans-serif", display: "inline-table"}} width="100%">
@@ -49,29 +50,24 @@ export default class EmailShell extends React.Component {
                                             </table>
                                         </td>
                                     </tr>
+                                    </tbody>
                                 </table>
                             </td>
                         </tr>
                         </tbody>
                     </table>
 
-                    <tr>
-                        <td>
-
-
-                            <table cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF">
+                            <table style={{padding: 0}} cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF">
                                 <tbody>
                                 <tr>
-                                    <td align="center" style={{padding:"0px 0px 10px 0px", borderBottom: "7px solid #005775"}}>
+                                    <td align="center" style={{padding:"0px 0px -5px 0px", borderBottom:"7px solid #005775"}}>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
-                        </td>
-                    </tr>
 
 
-                    <table cellPadding="0" cellSpacing="0" border="0" bgcolor="#FFFFFF">
+                    <table style={{padding: 0}} cellPadding="0" cellSpacing="0" border="0" bgcolor="#FFFFFF">
                         <tbody>
                         <tr>
                             <td>
@@ -133,10 +129,10 @@ export default class EmailShell extends React.Component {
                                            <tbody>
                                             <tr>
                                                 <td style={{padding:"16px 20px 0px 20px", fontSize:"16px", textAlign: "right", display: "inline-flex"}}>
-                                                    <a href="https://www.facebook.com/DenverCenter/"><img src="https://storage.googleapis.com/dcpa-email-images/SM-facebook-white-email.png" alt="Facebook" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily: "'Open Sans', sans-serif", border:"0px", padding: "0px 5px 5px 5px;"}} /></a>
+                                                    <a href="https://www.facebook.com/DenverCenter/"><img src="https://storage.googleapis.com/dcpa-email-images/SM-facebook-white-email.png" alt="Facebook" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily: "'Open Sans', sans-serif", border:"0px", padding: "0px 5px 5px 5px"}} /></a>
                                                     <br id="showonmobile" /> <a href="https://twitter.com/denvercenter"><img src="https://storage.googleapis.com/dcpa-email-images/SM-twitter-white-email.png" alt="Twitter" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily: "'Open Sans', sans-serif", border:"0px", padding: "0px 5px 5px 5px"}} /></a>
 
-                                                    <br id="showonmobile" /> <a href="https://www.instagram.com/denvercenter/"><img src="https://storage.googleapis.com/dcpa-email-images/SM-instagram-white-email.png" alt="Instagram" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily:" 'Open Sans', sans-serif", border:"0px", padding:" 0px 5px 5px 5px;"}} /></a>
+                                                    <br id="showonmobile" /> <a href="https://www.instagram.com/denvercenter/"><img src="https://storage.googleapis.com/dcpa-email-images/SM-instagram-white-email.png" alt="Instagram" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily:" 'Open Sans', sans-serif", border:"0px", padding:" 0px 5px 5px 5px"}} /></a>
 
                                                     <br id="showonmobile" /> <a href="https://www.youtube.com/denvercenter"><img src="https://storage.googleapis.com/dcpa-email-images/SM-youtube-white-email.png" alt="Youtube" style={{color:"#ffffff", fontSize:"14px", lineHeight:"1.2em", textAlign:"center", fontFamily:" 'Open Sans', sans-serif", border:"0px", padding:" 0px 5px 5px 5px"}} /></a>
                                                 </td>
@@ -149,7 +145,7 @@ export default class EmailShell extends React.Component {
                             </tr>
                             <tr>
                                 <td style={{padding:"15px 20px 10px 20px", textAlign: "center", width:" 100%"}}>
-                                    <div style={{height:" 1px", width: "100%;", margin: "0px auto", background: "#7ac79b"}}></div>
+                                    <div style={{height:" 1px", width: "100%", margin: "0px auto", background: "#7ac79b"}}></div>
                                 </td>
                             </tr>
                             <tr>
