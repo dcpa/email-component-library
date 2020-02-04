@@ -4,6 +4,7 @@ import KittyKatty from "../Svg/Svg";
 import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 import SideBar from "../SideBar/Sidebar";
 import CompLink from "../SideBar/CompLinks";
+import EmailShell from "../EmailShell/EmailShell";
 
 export default class ViewBox extends Component { 
         state = {
@@ -21,7 +22,7 @@ export default class ViewBox extends Component {
 
         renderItem() {
             return (
-                <div>Hello world</div>
+                <EmailShell />
             )
         }
 
