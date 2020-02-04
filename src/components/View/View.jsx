@@ -1,11 +1,29 @@
 import React,{ Component } from "react"; 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import KittyKatty from "../Svg/Svg";
-import SearchForm from "../SearchForm/SearchForm";
 import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
+import SideBar from "../SideBar/Sidebar";
+import CompLink from "../SideBar/CompLinks";
 
 export default class ViewBox extends Component { 
+        state = {
+            viewBox: "Home",
+            compWasClicked: false,
+            currentComponent: ""
+        }
 
+        componentLinkClicked = (name) => {
+            console.log(name);
+            this.setState({
+                compWasClicked: true
+            });
+        }
+
+        renderItem() {
+            return (
+                <div>Hello world</div>
+            )
+        }
 
     render(){
         return(
@@ -16,26 +34,21 @@ export default class ViewBox extends Component {
                         <Row>
                             <Col xs="12">
                                 <KittyKatty />
-                                <SearchForm />
                             </Col>
                         </Row>
                     </Container>
-                    Main 
-                    <br />
-                    Menu 
-                    <br />
-                    Where
-                    <br />
-                    Components
-                    <br />
-                    Will
-                    <br /> Be
-                    <br />
-                    linked
+                    <SideBar title="YesMail 2019">
+                        <CompLink componentName="Image Fine Print" clickAction={this.componentLinkClicked} />
+                    </SideBar>
                 </Col>
                 <Col xs="10">
                     <br />
-                    <HomeJumbo />
+                    {
+                        !this.state.compWasClicked ? 
+                            <HomeJumbo /> : 
+                            this.renderItem()
+                    }
+                    
                 </Col>
                 </Row>
             </Container>

@@ -16,8 +16,8 @@ const KittyKatty = (props) => {
                 <polygon points="45,55 55,55 50,60" fill="pink" />
                 <ellipse cx="65" cy="41" rx="2" ry="2" fill="white" />
                 <ellipse cx="35" cy="41" rx="2" ry="2" fill="white" />
-                <path d="M 40 65 q 5 10 10 0" stroke="black" fill="none" stroke-width="2" />
-                <path d="M 50 65 q 5 10 10 0" stroke="black" fill="none" stroke-width="2" />
+                <path d="M 40 65 q 5 10 10 0" stroke="black" fill="none" strokeWidth="2" />
+                <path d="M 50 65 q 5 10 10 0" stroke="black" fill="none" strokeWidth="2" />
                 <line x1="23" y1="55" x2="35" y2="60" stroke="black" />
                 <line x1="23" y1="62" x2="35" y2="63" stroke="black" />
                 <line x1="63" y1="60" x2="75" y2="55" stroke="black" />
