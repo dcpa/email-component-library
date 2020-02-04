@@ -5,6 +5,7 @@ import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 import SideBar from "../SideBar/Sidebar";
 import CompLink from "../SideBar/CompLinks";
 import EmailShell from "../EmailShell/EmailShell";
+import ImgFinePrint from "../email-components/FinePrint/ImageFinePrint";
 
 export default class ViewBox extends Component { 
         state = {
@@ -16,14 +17,17 @@ export default class ViewBox extends Component {
         componentLinkClicked = (name) => {
             console.log(name);
             this.setState({
-                compWasClicked: true
+                compWasClicked: true,
+                currentComponent: name
             });
         }
 
-        renderItem() {
-            return (
-                <EmailShell />
-            )
+        renderItem(currentItem) {
+            console.log("Triggered", currentItem);
+            switch (currentItem) {
+                case "Image Fine Print":
+                    return <ImgFinePrint />;
+            }
         }
 
     render(){
@@ -45,9 +49,11 @@ export default class ViewBox extends Component {
                 <Col xs="10">
                     <br />
                     {
-                        !this.state.compWasClicked ? 
+                        !this.state.compWasClicked  ? 
                             <HomeJumbo /> : 
-                            this.renderItem()
+                            <EmailShell>
+                                {this.renderItem(this.state.currentComponent)}
+                            </EmailShell>
                     }
                     
                 </Col>
