@@ -5,8 +5,12 @@ import { Overlay, OverlayTrigger, Tooltip } from "react-bootstrap";
 export default class ImgFinePrint extends React.Component {
 
     state = {
+        highlightOn: this.props.highlightsOn,
         description1: "This is fine print for an image resource. It can be placed under the header image of the email or any subsequent images within the email."
     }
+
+  
+
     render(){
         return(
             <>
@@ -27,7 +31,9 @@ export default class ImgFinePrint extends React.Component {
                                 </Tooltip>
                                 }
                                 >
-                            <td style={{fontSize:"10px", fontWeight:"normal", lineHeight:"1.2em", fontFamily:"Arial, Helvetica, sans-serif", color:"#747474", padding:"5px 0px 0px 20px", textAlign:"left"}}>
+                            <td 
+                                className={this.props.highlightsOn ? "highlighted" : null}
+                                style={{fontSize:"10px", fontWeight:"normal", lineHeight:"1.2em", fontFamily:"Arial, Helvetica, sans-serif", color:"#747474", padding:"5px 0px 0px 20px", textAlign:"left"}}>
                                 Jane Doe as 'So-and-So'. John Doe as 'So-and-So'. Photo: John Q
                             </td>
                             </OverlayTrigger> 

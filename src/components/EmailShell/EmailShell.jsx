@@ -10,7 +10,6 @@ export default class EmailShell extends React.Component {
     render() {
         return (
             <div style={{padding:0, margin:0, backgroundColor: "#F5F5F5"}}>
-
                 <div style={{ maxWidth: "600px", margin: "0 auto", backgroundColor: "#F5F5F5"}}>
                     <table cellSpacing="0" padding="0" border="0" width="600" role="presentation" bgcolor="#FFFFFF">
                         <tbody>

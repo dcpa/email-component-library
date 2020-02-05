@@ -11,3 +11,7 @@
   margin: 20px;
 }
 
+.highlighted {
+  background-color: lightpink;
+  padding: 10px;
+}

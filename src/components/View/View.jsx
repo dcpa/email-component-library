@@ -1,5 +1,5 @@
 import React,{ Component } from "react"; 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import KittyKatty from "../Svg/Svg";
 import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 import SideBar from "../SideBar/Sidebar";
@@ -11,7 +11,9 @@ export default class ViewBox extends Component {
         state = {
             viewBox: "Home",
             compWasClicked: false,
-            currentComponent: ""
+            currentComponent: "",
+            highlightButtonHover: false,
+            highlightsAreOn: true
         }
 
         componentLinkClicked = (name) => {
@@ -26,10 +28,17 @@ export default class ViewBox extends Component {
             console.log("Triggered", currentItem);
             switch (currentItem) {
                 case "Image Fine Print":
-                    return <ImgFinePrint />;
+                    return <ImgFinePrint highlightsOn={this.state.highlightsAreOn} />;
             }
         }
 
+
+        toggleHighlights = () => {
+            this.setState({
+                highlightsAreOn: !this.state.highlightsAreOn,
+                highlightButtonHover: !this.state.highlightButtonHover
+            })
+        }
     render(){
         return(
             <Container fluid>
@@ -39,9 +48,26 @@ export default class ViewBox extends Component {
                         <Row>
                             <Col xs="12">
                                 <KittyKatty />
+                                {!this.state.compWasClicked ? null :
+                                ( 
+                                this.state.highlightsAreOn ? 
+                                <Button 
+                                    variant="outline-warning"
+                                    onClick={this.toggleHighlights}
+                                    >
+                                        Turn Highlights Off
+                                </Button> :
+                                <Button 
+                                    variant="outline-light"
+                                    onClick={this.toggleHighlights}
+                                    >
+                                        Turn Highlights On
+                                </Button>
+                                )}
                             </Col>
                         </Row>
                     </Container>
+                    <br />
                     <SideBar title="YesMail 2019">
                         <CompLink componentName="Image Fine Print" clickAction={this.componentLinkClicked} />
                     </SideBar>
