@@ -5,7 +5,11 @@ import SearchForm from "../SearchForm/SearchForm";
 import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 
 export default class ViewBox extends Component { 
+    state = {
+        componentWasClicked: false, 
+        activeComponent: "SearchForm", 
 
+    }
 
     render(){
         return(
@@ -20,7 +24,7 @@ export default class ViewBox extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    Main 
+                    YesMail 2019
                     <br />
                     Menu 
                     <br />
@@ -32,6 +36,8 @@ export default class ViewBox extends Component {
                     <br /> Be
                     <br />
                     linked
+                    <br />
+                    <this.state.activeComponent />
                 </Col>
                 <Col xs="10">
                     <br />
