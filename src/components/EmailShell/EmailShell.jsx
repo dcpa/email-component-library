@@ -4,6 +4,8 @@ import "./EmailShell.css";
 import ImgFinePrint from "../email-components/FinePrint/ImageFinePrint";
 import PhotoAndQuotes from "../email-components/PhotoAndQuotes/PhotoAndQuotes";
 import NumberedList from "../email-components/NumberedList/NumberedList";
+import Calendar from "../email-components/Calendar/Calendar";
+import Gifs from "../email-components/GIFs/Gifs";
 
 export default class EmailShell extends React.Component {
 
@@ -20,6 +22,10 @@ export default class EmailShell extends React.Component {
                 return <PhotoAndQuotes highlightsOn={this.props.highlightState} />;
             case "Numbered List": 
                 return <NumberedList highlightsOn={this.props.highlightState} />;
+            case "Calendar": 
+                return <Calendar highlightsOn={this.props.highlightState} />;
+            case "Gifs": 
+                return <Gifs highlightsOn={this.props.highlightState} />;
         }
     }
 
@@ -88,8 +94,7 @@ export default class EmailShell extends React.Component {
                                                         style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily: "Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
                                                         align="center">
                                                         <a style={{color:"#FFFFFF", textDecoration:"none", cursor:"pointer"}}
-                                                            href="https://tickets.denvercenter.org/Online/login.asp?targetpage=article/sc_20myst3000">LOG IN &
-                                                                BUY</a>
+                                                            href="https://tickets.denvercenter.org/Online/login.asp?targetpage=article/sc_20myst3000">GET TICKETS</a>
                                                     </td>
                                                 </tr>
                                                 </tbody>
