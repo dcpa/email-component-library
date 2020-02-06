@@ -3,6 +3,10 @@
     border-top: 1px solid white;
 }
 
+.sideBarLink:nth-child(1) {
+    border-top: none;
+}
+
 .sideBarLink:hover {
     color: lemonchiffon;
     background: rgba(0,0,0,0.2);

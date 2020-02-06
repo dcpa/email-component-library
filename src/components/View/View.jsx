@@ -63,11 +63,13 @@ export default class ViewBox extends Component {
                     </Container>
                     <br />
                     <SideBar title="YesMail 2019">
+                        <CompLink componentName="Vanilla Content Block" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Image Fine Print" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Photos and Quotes" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Numbered List" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Calendar" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Gifs" clickAction={this.componentLinkClicked} />
+                        <CompLink componentName="Promo Code Box" clickAction={this.componentLinkClicked} />
                     </SideBar>
                 </Col>
                 <Col xs="10">

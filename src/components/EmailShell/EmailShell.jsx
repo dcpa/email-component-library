@@ -1,11 +1,14 @@
 import React from "react";
 import "./EmailShell.css";
+import { OverlayTrigger, Popover } from "react-bootstrap";
 
 import ImgFinePrint from "../email-components/FinePrint/ImageFinePrint";
 import PhotoAndQuotes from "../email-components/PhotoAndQuotes/PhotoAndQuotes";
 import NumberedList from "../email-components/NumberedList/NumberedList";
 import Calendar from "../email-components/Calendar/Calendar";
 import Gifs from "../email-components/GIFs/Gifs";
+import Vanilla from "../email-components/Vanilla/Vanilla";
+import Promobox from "../email-components/PromoBox/Promobox";
 
 export default class EmailShell extends React.Component {
 
@@ -26,6 +29,10 @@ export default class EmailShell extends React.Component {
                 return <Calendar highlightsOn={this.props.highlightState} />;
             case "Gifs": 
                 return <Gifs highlightsOn={this.props.highlightState} />;
+            case "Vanilla Content Block":
+                return <Vanilla highlightsOn={this.props.highlightState} />;
+            case "Promo Code Box":
+                return <Promobox highlightsOn={this.props.highlightState} />;
         }
     }
 
@@ -94,9 +101,42 @@ export default class EmailShell extends React.Component {
                                                         style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily: "Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
                                                         align="center">
                                                         <a style={{color:"#FFFFFF", textDecoration:"none", cursor:"pointer"}}
-                                                            href="https://tickets.denvercenter.org/Online/login.asp?targetpage=article/sc_20myst3000">GET TICKETS</a>
+                                                            href="https://www.denvercenter.org/tickets-events/">GET TICKETS</a>
                                                     </td>
                                                 </tr>
+                                                <br />
+                                                {this.props.currentComponent === "Vanilla Content Block" ? (
+                                                    <tr>
+                                                        <OverlayTrigger
+                                key="top"
+                                placement="top"
+                                overlay={
+                                    <Popover id="fineprint-tooltip">
+                                        <Popover.Title as="h3">
+                                            Subscriber CTA
+                                        </Popover.Title>
+                                        <Popover.Content>
+                                            This is a CTA that is dynamically generated for Subscriber E-mails, while the above (Get Tickets) is hidden. 
+                                            <br />
+                                            <br />
+                                            <strong className="safeChanges">Safe Changes:</strong> Button color, text color
+                                        </Popover.Content>
+                                    </Popover>
+                                }>
+                                    <div className={this.props.highlightState ? "highlighted" : null}>
+                                            <td
+                                                style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily:" Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
+                                                align="center">
+                                                
+                                                <a style={{color:"#FFFFFF", textDecoration:"none", cursor:"pointer"}}
+                                                href="https://tickets.denvercenter.org/Online/">LOG IN &
+                                                BUY</a>
+                                            </td>
+                                                </div>
+                                            
+                                            </OverlayTrigger>
+                                        </tr>
+                                    ) : null }
                                                 </tbody>
                                             </table>
                                         </td>
