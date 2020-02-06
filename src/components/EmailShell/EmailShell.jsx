@@ -1,10 +1,26 @@
 import React from "react";
 import "./EmailShell.css";
 
+import ImgFinePrint from "../email-components/FinePrint/ImageFinePrint";
+import PhotoAndQuotes from "../email-components/PhotoAndQuotes/PhotoAndQuotes";
+import NumberedList from "../email-components/NumberedList/NumberedList";
+
 export default class EmailShell extends React.Component {
 
     state = {
 
+    }
+
+    renderItem(currentItem) {
+        console.log("Triggered", currentItem);
+        switch (currentItem) {
+            case "Image Fine Print":
+                return <ImgFinePrint highlightsOn={this.props.highlightState} />;
+            case "Photos and Quotes": 
+                return <PhotoAndQuotes highlightsOn={this.props.highlightState} />;
+            case "Numbered List": 
+                return <NumberedList highlightsOn={this.props.highlightState} />;
+        }
     }
 
     render() {
@@ -51,10 +67,7 @@ export default class EmailShell extends React.Component {
                                     </tr>
                                     </tbody>
                                 </table>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                       
 
                             <table style={{padding: 0}} cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF">
                                 <tbody>
@@ -65,8 +78,28 @@ export default class EmailShell extends React.Component {
                                 </tbody>
                             </table>
                             
-                        {this.props.children}
-
+                        {this.renderItem(this.props.currentComponent)}
+                        <tr>
+                                        <td align="center" style={{padding:"30px 20px 25px 20px"}}>
+                                            <table cellPadding="0" cellSpacing="0" border="0" id="full">
+                                                <tbody> 
+                                                <tr>
+                                                    <td
+                                                        style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily: "Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
+                                                        align="center">
+                                                        <a style={{color:"#FFFFFF", textDecoration:"none", cursor:"pointer"}}
+                                                            href="https://tickets.denvercenter.org/Online/login.asp?targetpage=article/sc_20myst3000">LOG IN &
+                                                                BUY</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
                     <div style={{backgroundColor:"#005776"}}>
                         <table cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF" style={{background: "#005776"}}>
                             <tbody>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Accordion, Card } from "react-bootstrap";
+import "./SideBar.css";
 
 const SideBar = (props) => {
     return (

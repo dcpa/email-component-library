@@ -1,0 +1,9 @@
+.sideBarLink { 
+    padding: 15px 0 15px 0; 
+    border-top: 1px solid white;
+}
+
+.sideBarLink:hover {
+    color: lemonchiffon;
+    background: rgba(0,0,0,0.2);
+}

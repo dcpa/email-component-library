@@ -5,7 +5,8 @@ import HomeJumbo from "../HomePageJumbo/HomePageJumbo";
 import SideBar from "../SideBar/Sidebar";
 import CompLink from "../SideBar/CompLinks";
 import EmailShell from "../EmailShell/EmailShell";
-import ImgFinePrint from "../email-components/FinePrint/ImageFinePrint";
+
+
 
 export default class ViewBox extends Component { 
         state = {
@@ -24,13 +25,6 @@ export default class ViewBox extends Component {
             });
         }
 
-        renderItem(currentItem) {
-            console.log("Triggered", currentItem);
-            switch (currentItem) {
-                case "Image Fine Print":
-                    return <ImgFinePrint highlightsOn={this.state.highlightsAreOn} />;
-            }
-        }
 
 
         toggleHighlights = () => {
@@ -70,6 +64,8 @@ export default class ViewBox extends Component {
                     <br />
                     <SideBar title="YesMail 2019">
                         <CompLink componentName="Image Fine Print" clickAction={this.componentLinkClicked} />
+                        <CompLink componentName="Photos and Quotes" clickAction={this.componentLinkClicked} />
+                        <CompLink componentName="Numbered List" clickAction={this.componentLinkClicked} />
                     </SideBar>
                 </Col>
                 <Col xs="10">
@@ -77,8 +73,7 @@ export default class ViewBox extends Component {
                     {
                         !this.state.compWasClicked  ? 
                             <HomeJumbo /> : 
-                            <EmailShell>
-                                {this.renderItem(this.state.currentComponent)}
+                            <EmailShell currentComponent={this.state.currentComponent} highlightState={this.state.highlightsAreOn}>
                             </EmailShell>
                     }
                     
