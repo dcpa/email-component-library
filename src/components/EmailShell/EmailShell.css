@@ -1,0 +1,295 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400,700|Roboto+Slab:100,400,700);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,900');
+/*-- Add your other styles below
+==========================================
+These are some of the default styles to use
+==========================================
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Arial', Helvetica, sans-serif;
+
+--*/
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+    background-color: #FFFFFF;
+}
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+a img {
+    border: none;
+}
+td {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.1em;
+}
+ul li {
+    color:#939598;
+    list-style:none; /* if you're not already using a reset */
+    padding:0px;
+}
+ul li:before {
+    color:#005775; /* set color to deep blue */
+    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding:0px 5px 0px 0px; /* give the bullet some padding from the text Make sure to use em*/
+    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
+
+ul .noListStyle:before {
+    display:none;
+}
+
+.general-padding {
+  padding: 10px;
+}
+.wrappercell {
+  padding: 0px;
+}
+
+ #showonmobile {
+  display: none;
+ }
+
+
+ @media all and (max-width:600px) {
+  .full {
+    display:block !important;
+    text-align: center !important;
+  }
+
+  th.full {
+    width: 98% !important;
+  }
+
+.full > img {
+ padding-left: 12px !important
+}
+
+body, table[class="wrappertable"], table[class="structure"] {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+td[class="wrappercell"] {
+  padding: 0px !important;
+}
+td[class="inner-padding"] {
+  padding: 0px !important;
+}
+td[class="general-padding"] {
+  padding: 10px !important;
+}
+/*------This makes the col split and stack on top of eachother------*/
+td[class="twocolumn"] {
+  width: 100% !important;
+  float: left !important;
+}
+/*------This makes the col split and stack on top of eachother------*/
+td[class="threecolumn"] {
+  width: 100% !important;
+  float: left !important;
+}
+#header {
+  width: 100% !important;
+}
+.img-scale {
+  width: 100% !important;
+  padding: 0px !important;
+}
+.img-scale50 {
+  width: 50% !important;
+  padding: 0px !important;
+}
+ #showonmobile {
+  display: inline-block;
+ }
+
+#hideonmobile {
+ display: none;
+}
+
+td[id="hide"], span[id="hide"], br[id="hide"], a[id="hide"], img[id="hide"], strong[id="hide"], table[id="hide"] {
+  display: none !important;
+}
+.line-break {
+  display: block !important;
+}
+td a[id="footer-links"] {
+    width: 95% !important;
+  background-color: #666666 !important;
+  border-radius: 5px !important;
+  color: #FFFFFF !important;
+  font-size: 14px !important;
+  padding: 13px !important;
+  margin: 5px 0px 5px 0px !important;
+  display: block !important;
+  text-align: center !important;
+}
+td a[id="links-map"] {
+  width: 92.5% !important;
+  background-color: #FFFFFF !important;
+  border-radius: 0px !important;
+  color: #47B9C7 !important;
+  border: 2px solid #47B9C7 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 13px 13px 13px 13px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/270x270-buell-theatre-location.jpg) !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px !important;
+  background-position: 92% 50% !important;
+}
+td a[id="links"] {
+  width: 92.5% !important;
+  background-color: #47B9C7 !important;
+  border-radius: 0px !important;
+  color: #FFFFFF !important;
+  border-bottom: 2px solid #47B9C7 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 20px 13px 20px 20px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-white.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+td a:hover[id="links"] {
+  width: 92.5% !important;
+  background-color: #FFFFFF !important;
+  border-radius: 0px !important;
+  color: #47B9C7 !important;
+  border-bottom: 2px solid #47B9C7 !important;
+  font-size: 16px !important;
+  padding: 20px 13px 20px 20px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-blue.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+td a[id="links-footer"] {
+  width: 100% !important;
+  background-color: #939598 !important;
+  border-radius: 0px !important;
+  color: #FFFFFF !important;
+  border-bottom: 2px solid #FFFFFF !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 20px 0px 20px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-white.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+td a:hover[id="links-footer"] {
+  width: 100% !important;
+  background-color: #FFFFFF !important;
+  border-radius: 0px !important;
+  color: #000000 !important;
+  border-bottom: 2px solid #FFFFFF !important;
+  font-size: 16px !important;
+  padding: 20px 0px 20px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-black.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+td a[id="links-callout"] {
+  width: 100% !important;
+  background-color: #000000 !important;
+  border-radius: 0px !important;
+  color: #FFFFFF !important;
+  border-bottom: 2px solid #FFFFFF !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  padding: 20px 0px 20px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-white.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+td a:hover[id="links-callout"] {
+  width: 100% !important;
+  background-color: #FFFFFF !important;
+  border-radius: 0px !important;
+  color: #000000 !important;
+  border-bottom: 2px solid #FFFFFF !important;
+  font-size: 16px !important;
+  padding: 20px 0px 20px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  display: block !important;
+  text-align: left !important;
+  background-image: url(https://storage.googleapis.com/dcpa-email-images/arrow-black.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: 15px !important;
+  background-position: 95% 50% !important;
+}
+}
+
+/* Bell Animation */
+/* .animate-bell { */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+/*   animation: bounce 8s ease-in-out .2s infinite; */
+/*   transform-origin: 50% 4px; */
+/* } */
+
+/* 
+@keyframes bounce {
+  0% { -webkit-transform: rotateZ(0); }
+  1% { -webkit-transform: rotateZ(30deg); }
+  3% { -webkit-transform: rotateZ(-28deg); }
+  5% { -webkit-transform: rotateZ(34deg); }
+  7% { -webkit-transform: rotateZ(-32deg); }
+  9% { -webkit-transform: rotateZ(30deg); }
+  11% { -webkit-transform: rotateZ(-28deg); }
+  13% { -webkit-transform: rotateZ(26deg); }
+  15% { -webkit-transform: rotateZ(-24deg); }
+  17% { -webkit-transform: rotateZ(22deg); }
+  19% { -webkit-transform: rotateZ(-20deg); }
+  21% { -webkit-transform: rotateZ(18deg); }
+  23% { -webkit-transform: rotateZ(-16deg); }
+  25% { -webkit-transform: rotateZ(14deg); }
+  27% { -webkit-transform: rotateZ(-12deg); }
+  29% { -webkit-transform: rotateZ(10deg); }
+  31% { -webkit-transform: rotateZ(-8deg); }
+  33% { -webkit-transform: rotateZ(6deg); }
+  35% { -webkit-transform: rotateZ(-4deg); }
+  37% { -webkit-transform: rotateZ(2deg); }
+  39% { -webkit-transform: rotateZ(-1deg); }
+  41% { -webkit-transform: rotateZ(1deg); }
+
+  43% { -webkit-transform: rotateZ(0); }
+  100% { -webkit-transform: rotateZ(0); }
+}
+ */

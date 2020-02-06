@@ -2,7 +2,8 @@
   text-align: center;
   background-color: #282c34;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
+  
 }
 
 
@@ -10,3 +11,7 @@
   margin: 20px;
 }
 
+.highlighted {
+  background-color: lightpink;
+  padding: 10px;
+}
