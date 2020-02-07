@@ -16,7 +16,7 @@ const Navigationbar = (props) => {
     return (
       <div>
         <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">DCPA Email Component Library</NavbarBrand>
+          <NavbarBrand href="/email-component-library/">DCPA Email Component Library</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
