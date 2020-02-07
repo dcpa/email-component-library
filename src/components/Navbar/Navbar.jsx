@@ -22,7 +22,6 @@ const Navigationbar = (props) => {
             <Nav className="mr-auto" navbar>
               
             </Nav>
-            <NavbarText>Simple Text</NavbarText>
           </Collapse>
         </Navbar>
       </div>

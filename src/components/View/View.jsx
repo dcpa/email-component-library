@@ -41,7 +41,7 @@ export default class ViewBox extends Component {
                     <Container>
                         <Row>
                             <Col xs="12">
-                                <KittyKatty />
+                                <a href="/"><KittyKatty /></a>
                                 {!this.state.compWasClicked ? null :
                                 ( 
                                 this.state.highlightsAreOn ? 
