@@ -11,6 +11,8 @@ import Vanilla from "../email-components/Vanilla/Vanilla";
 import Promobox from "../email-components/PromoBox/Promobox";
 import FooterBanner from "../email-components/FooterBanner/FooterBanner";
 import BannerList from "../email-components/Lists/BannerList";
+import TileListL from "../email-components/Lists/TileListL";
+import TileListS from "../email-components/Lists/TileListS";
 
 export default class EmailShell extends React.Component {
 
@@ -39,6 +41,10 @@ export default class EmailShell extends React.Component {
                 return <FooterBanner highlightsOn={this.props.highlightState} />;
             case "Banner List":
                 return <BannerList highlightsOn={this.props.highlightState} />;
+            case "Tile List (Large)":
+                return <TileListL highlightsOn={this.props.highlightState} />;
+            case "Tile List (Small)":
+                return <TileListS highlightsOn={this.props.highlightState} />;
         }
     }
 
@@ -107,7 +113,7 @@ export default class EmailShell extends React.Component {
                                         <td align="center" style={{padding:"30px 20px 25px 20px"}}>
                                             <table cellPadding="0" cellSpacing="0" border="0" id="full">
                                                 <tbody> 
-                                                {this.props.currentComponent === "Footer Banner" ? null : (
+                                                {this.props.currentComponent === "Footer Banner" || this.props.currentComponent === "Tile List (Small)" ? null : (
                                                 <tr>
                                                     <td
                                                         style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily: "Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
