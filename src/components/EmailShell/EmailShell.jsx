@@ -13,6 +13,7 @@ import FooterBanner from "../email-components/FooterBanner/FooterBanner";
 import BannerList from "../email-components/Lists/BannerList";
 import TileListL from "../email-components/Lists/TileListL";
 import TileListS from "../email-components/Lists/TileListS";
+import Blank from "../email-components/Blank/Blank";
 
 export default class EmailShell extends React.Component {
 
@@ -45,6 +46,8 @@ export default class EmailShell extends React.Component {
                 return <TileListL highlightsOn={this.props.highlightState} />;
             case "Tile List (Small)":
                 return <TileListS highlightsOn={this.props.highlightState} />;
+            case "Copy Fine Print": 
+                return <Blank highlightsOn={this.props.highlightState} />;
         }
     }
 
@@ -171,6 +174,46 @@ export default class EmailShell extends React.Component {
                         </tbody>
                     </table>
                     <div style={{backgroundColor:"#005776"}}>
+                        {this.props.currentComponent === "Copy Fine Print" ? (
+                             <OverlayTrigger
+                             key="top"
+                             placement="top"
+                             overlay={
+                                 <Popover id="fineprint-tooltip">
+                                     <Popover.Title as="h3">
+                                         Subscriber CTA
+                                     </Popover.Title>
+                                     <Popover.Content>
+                                         This is a CTA that is dynamically generated for Subscriber E-mails, while the above (Get Tickets) is hidden. 
+                                         <br />
+                                         <br />
+                                         <strong className="safeChanges">Safe Changes:</strong> Button color, text color
+                                     </Popover.Content>
+                                 </Popover>
+                             }>
+                                 <div className={this.props.highlightState ? "highlighted" : null}>
+                            <table cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#005776" style={{background: "#005776"}}>
+                            <tr>
+                             <td style={{padding:"10px 20px 10px 20px"}}>
+                              <table cellPadding="0" cellSpacing="0" border="0" width="100%">
+                                  <tr>
+                                    <td style={{fontSize:"10px", lineHeight:"1.2em", fontFamily:"Arial, Helvetica, sans-serif", textAlign: "center", color:"#ffffff", padding: "15px 20px 0px 20px"}}>
+                                     * PLEASE NOTE: We are not liable for any injury caused by failure to read the fine print.  
+                                    </td>
+                                  </tr>
+                              </table>
+                             </td>
+                            </tr>
+                            <tr>
+                              <td style={{padding:"15px 20px 5px 20px", textAlign: "center", width: "100%"}}>
+                                <div style={{height: "1px; width: 100%", margin: "0px auto", background: "#7ac79b"}}></div>
+                              </td>
+                            </tr>
+                           </table>
+                           </div>
+                           </OverlayTrigger>
+                          
+                        ) : null}
                         <table cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF" style={{background: "#005776"}}>
                             <tbody>
                             <tr>
