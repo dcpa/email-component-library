@@ -10,6 +10,7 @@ import Gifs from "../email-components/GIFs/Gifs";
 import Vanilla from "../email-components/Vanilla/Vanilla";
 import Promobox from "../email-components/PromoBox/Promobox";
 import FooterBanner from "../email-components/FooterBanner/FooterBanner";
+import BannerList from "../email-components/Lists/BannerList";
 
 export default class EmailShell extends React.Component {
 
@@ -36,6 +37,8 @@ export default class EmailShell extends React.Component {
                 return <Promobox highlightsOn={this.props.highlightState} />;
             case "Footer Banner": 
                 return <FooterBanner highlightsOn={this.props.highlightState} />;
+            case "Banner List":
+                return <BannerList highlightsOn={this.props.highlightState} />;
         }
     }
 
@@ -81,9 +84,9 @@ export default class EmailShell extends React.Component {
                                             </table>
                                         </td>
                                     </tr>
-                                    </tbody>
-                                </table>
-                       
+                                   
+                                    <tr>
+                                        <td align="center" bgcolor="#FFFFFF" className="inner-padding" style={{padding: "0px 0px 0px 0px", textAlign: "center",  lineHeight: "1.4em"}}>
 
                             <table style={{padding: 0}} cellPadding="0" cellSpacing="0" border="0" width="100%" bgcolor="#FFFFFF">
                                 <tbody>
@@ -93,8 +96,13 @@ export default class EmailShell extends React.Component {
                                 </tr>
                                 </tbody>
                             </table>
-                            
-                        {this.renderItem(this.props.currentComponent)}
+                            </td>
+                            </tr>
+                            <tr>
+                                <td align="center" bgcolor="#FFFFFF" className="inner-padding" style={{padding: "0px 0px 0px 0px", textAlign: "center",  lineHeight: "1.4em"}}>
+                                    {this.renderItem(this.props.currentComponent)}
+                                </td>
+                            </tr>                        
                         <tr>
                                         <td align="center" style={{padding:"30px 20px 25px 20px"}}>
                                             <table cellPadding="0" cellSpacing="0" border="0" id="full">
@@ -109,7 +117,11 @@ export default class EmailShell extends React.Component {
                                                     </td>
                                                 </tr>
                                                 )}
+                                                <tr>
+                                                    <td>
                                                 <br />
+                                                    </td>
+                                                </tr>
                                                 {this.props.currentComponent === "Vanilla Content Block" ? (
                                                     <tr>
                                                         <OverlayTrigger
@@ -128,16 +140,16 @@ export default class EmailShell extends React.Component {
                                         </Popover.Content>
                                     </Popover>
                                 }>
-                                    <div className={this.props.highlightState ? "highlighted" : null}>
                                             <td
                                                 style={{backgroundColor:"#005775", color:"#FFFFFF", textAlign:"center", fontSize:"16px", lineHeight:"1.2em", fontWeight:"700", cursor:"pointer", fontFamily:" Arial, sans-serif, 'Montserrat'", padding:"20px 40px 20px 40px", textTransform: "uppercase", width: "230px"}}
                                                 align="center">
+                                            <div className={this.props.highlightState ? "highlighted" : null}>
                                                 
                                                 <a style={{color:"#FFFFFF", textDecoration:"none", cursor:"pointer"}}
                                                 href="https://tickets.denvercenter.org/Online/">LOG IN &
                                                 BUY</a>
-                                            </td>
                                                 </div>
+                                            </td>
                                             
                                             </OverlayTrigger>
                                         </tr>
@@ -146,6 +158,8 @@ export default class EmailShell extends React.Component {
                                             </table>
                                         </td>
                                     </tr>
+                                    </tbody>
+                                </table>
                                     </td>
                         </tr>
                         </tbody>

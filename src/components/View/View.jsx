@@ -71,6 +71,7 @@ export default class ViewBox extends Component {
                         <CompLink componentName="Gifs" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Promo Code Box" clickAction={this.componentLinkClicked} />
                         <CompLink componentName="Footer Banner" clickAction={this.componentLinkClicked} />
+                        <CompLink componentName="Banner List" clickAction={this.componentLinkClicked} />
                     </SideBar>
                 </Col>
                 <Col xs="10">

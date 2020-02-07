@@ -19,6 +19,8 @@ const SideBar = (props) => {
                     </Accordion.Collapse>
                 </Card>
             </Accordion>
+            <br />
+            <br />
         </>
     )
 }
