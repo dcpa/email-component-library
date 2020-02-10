@@ -11,7 +11,7 @@ const HomeJumbo = (props) => {
                                 This library has been created as a resource for the Creative Services Team at the Denver Center for the Performing Arts and their Marketing Partners. 
                             </p>
                             <p>
-                                We have broken down our many different types of emails into their "component" parts - the smallest, whole unit of an e-mail and catalogued them here. 
+                                We have broken down our many different types of emails into the smallest, whole unit of an e-mail - a "component" - and catalogued them here. 
                             </p>
                             <p>
                                 This way, designers, partners, and anyone hoping to utilize the emails here at the DCPA can easily look through tried-and-true email components they can use to best convey information/images. 
@@ -19,6 +19,8 @@ const HomeJumbo = (props) => {
                             </p>
                             <p>
                                 On this home page, we will post any updates - like new components! So check back in regularly.
+                                <br /> <br />
+                                Also, if you know of a component that is not listed here, please let us know! This is a work in progress.
                             </p>
                             <p>
                                 Thanks! 
